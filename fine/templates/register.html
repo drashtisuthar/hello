@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                height: 100vh;
+                align-items: center;
+                flex-direction: column;
+                background-color:darkcyan;
+            }
+            form{
+                margin-top: 50px;
+                text-align: center;
+            }
+            form h1{
+                font-family: sans-serif;
+                margin-bottom: 30px;
+                color: darkred;
+            }
+            input{
+                display: block;
+                width: 350px;
+                height: 40px;
+                margin: 20px;
+                border: none;
+                outline: none;
+                font-size: 20px;
+                border-bottom: 1px solid black;
+            }
+            input#submit{
+			width: 350px;
+			padding: 6px;
+			font-size: 20px;
+			background-color: rgb(255, 0, 64);
+			cursor: pointer;
+			border: none;
+			border-radius: 5px;
+            color: wheat;
+		    }
+            
+        </style>
+    </head>
+    <body>
+
+        <form method="POST">
+            <h1><u><i>Register Here!</i></u></h1>
+
+            {% csrf_token %}
+            <input type="text" name="name" id="name" placeholder="Enter Name">
+            <input type="text" name="email" id="name" placeholder="Enter Email">
+            <input type="text" name="phn" id="name" placeholder="Enter Phone">
+            <input type="text" name="pass" id="name" placeholder="Enter Password">
+
+            <input type="submit" value="Register" id="submit">
+
+        </form>
+    </body>
+</html>

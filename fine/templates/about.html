@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>index page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+<body>
+
+{% block content %}
+    <h1>Hello Guys!</h1>
+    <br>
+    <h1>Good Morning</h1>
+    <img src="{% static 'img/2.jpg' %}" height="360px" width="410px">
+{% endblock %}      
+</body>
+</html>

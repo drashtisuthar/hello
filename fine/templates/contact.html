@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Demo</title>
+    <style>
+        body{
+            background-color: rgb(153, 165, 42);
+        }
+        h1{
+            text-align: center;
+            color: crimson;
+        }
+        p{
+            text-align: center;
+        }
+        textarea{
+            width: 80%; 
+            height: 150px;
+            padding: 12px;  
+            border: 1px solid yellow; 
+            border-radius: 4px; 
+            box-sizing: border-box;
+            margin-top: 6px; 
+        }
+        #submit{
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button{
+             cursor: pointer;
+             background-color: teal;
+             border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <h1>Contact Page</h1>
+    <p>Whatever your comments are, we want to hear from you. Just fill out the feedback form below and we’ll respond as soon as possible.
+    </p>
+    <p>Giving the best support to you is our priority. We know you're a real person with real questions. Just let us know what you need.</p>
+    <h3><b>How can we help you today?*</b></h3>
+    <form id="Register" method="post">
+        <label>Name : </label>
+        <br>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label>Email : </label>
+        <br>
+        <input type="email" name="email" id="name">
+        <br><br>
+        <label for="country">Country</label>
+        <br>
+        <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+            <option value="india">India</option>
+        </select>
+        <br><br>
+        <label for="subject">Subject</label>
+        <br>
+        <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+        <br><br>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    <br>
+    <a href="{% url 'info' %}" >Goto Info Page</a> 
+{% endblock %}     
+</body>
+</html>

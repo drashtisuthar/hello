@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+    <head>
+        <title>master page</title>
+        <style>
+        </style>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+
+    </head>
+    <body  style="background-image: url'{% static 'img/2.jpg'%}'">
+
+        <div class="full-page">
+
+            <div class="navbar">
+                <div>
+                    <a href="">Hello coding</a>
+                </div>
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="{% url 'about'%}">About</a></li>
+                        <li><a href="{% url 'index'%}">Index</a></li>
+                        <li><a href="{% url 'contact'%}">contact Us</a></li>
+                        <li><a href="{% url 'info'%}">Info</a></li>
+                        <li><a href="{% url 'login'%}">Login</a></li>
+                        <li><a href="{% url 'register'%}">register</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
+
+        <footer>
+            @Copyright e-book website 2021-All Right Reserved
+        </footer>
+
+        </div>        
+    </body>
+</html>

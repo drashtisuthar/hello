@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>this is my Info Demo</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Id</th>
+        </tr>
+          
+        {%for i in xyz%}
+        <tr>
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    <br><br>
+    <a href="{% url 'home' %}" >Goto Home Page</a>  
+{% endblock %}
